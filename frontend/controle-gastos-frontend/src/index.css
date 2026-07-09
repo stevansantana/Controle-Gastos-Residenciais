@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
+:root {
+  /* --- Paleta: inspirada em um livro-caixa contábil de papel --- */
+  --color-ink: #1c2b22; /* verde-tinta escuro, usado no cabeçalho e textos fortes */
+  --color-paper: #f4f1e6; /* papel do livro-caixa */
+  --color-paper-line: #ded7c0; /* linhas de pauta do papel */
+  --color-card: #fffdf7; /* cartões/tabelas, um tom mais claro que o papel */
+  --color-brass: #a4793c; /* dourado envelhecido: usado para receitas */
+  --color-rust: #97402f; /* vermelho ferrugem: usado para despesas/alertas */
+  --color-muted: #6f6a5a;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    var(--color-paper-line) 28px
+  );
+  color: var(--color-ink);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+select {
+  font-family: inherit;
+  font-size: 0.95rem;
+}
