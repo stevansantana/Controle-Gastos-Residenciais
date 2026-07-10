@@ -1,0 +1,268 @@
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+/* ---------- Cabeçalho ---------- */
+
+.cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2.5rem 0 1.5rem;
+  border-bottom: 3px double var(--color-ink);
+}
+
+.cabecalho-marca {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Selo circular: o elemento-assinatura do design, remete a um carimbo
+   de recebido/pago em um livro-caixa físico. */
+.cabecalho-selo {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-ink);
+  transform: rotate(-8deg);
+  flex-shrink: 0;
+}
+
+.cabecalho-marca h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.cabecalho-marca p {
+  margin: 0.15rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.abas {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.aba {
+  background: transparent;
+  border: 1px solid var(--color-ink);
+  color: var(--color-ink);
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.aba--ativa {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* ---------- Painéis ---------- */
+
+.conteudo {
+  padding-top: 2rem;
+}
+
+.painel {
+  background: var(--color-card);
+  border: 1px solid var(--color-paper-line);
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 1px 0 rgba(28, 43, 34, 0.06);
+}
+
+.painel-titulo {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-paper-line);
+}
+
+/* ---------- Formulários ---------- */
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1 1 180px;
+}
+
+.campo--curto {
+  flex: 0 1 130px;
+}
+
+.campo label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+}
+
+.campo input,
+.campo select {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--color-paper-line);
+  border-radius: 6px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 1px;
+}
+
+.botao {
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.botao--primario {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.botao--primario:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.botao--perigo {
+  background: transparent;
+  color: var(--color-rust);
+  border: 1px solid var(--color-rust);
+}
+
+.botao--pequeno {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+}
+
+.mensagem-erro {
+  background: rgba(151, 64, 47, 0.1);
+  color: var(--color-rust);
+  border: 1px solid rgba(151, 64, 47, 0.3);
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  margin: -0.5rem 0 1.25rem;
+}
+
+.mensagem-aviso {
+  background: rgba(164, 121, 60, 0.12);
+  color: var(--color-brass);
+  border: 1px solid rgba(164, 121, 60, 0.35);
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  margin: -0.5rem 0 1.25rem;
+}
+
+/* ---------- Tabelas ---------- */
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.tabela th {
+  text-align: left;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--color-ink);
+}
+
+.tabela td {
+  padding: 0.65rem 0.4rem;
+  border-bottom: 1px solid var(--color-paper-line);
+}
+
+.tabela-vazia {
+  text-align: center;
+  color: var(--color-muted);
+  padding: 1.5rem 0;
+}
+
+.tabela-total td {
+  border-top: 2px solid var(--color-ink);
+  border-bottom: none;
+  font-weight: 700;
+  padding-top: 0.9rem;
+}
+
+.valor-monetario {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.valor-monetario--receita {
+  color: #3f6b3f;
+}
+
+.valor-monetario--despesa {
+  color: var(--color-rust);
+}
+
+.etiqueta {
+  display: inline-block;
+  font-size: 0.76rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(28, 43, 34, 0.08);
+  color: var(--color-ink);
+}
+
+.etiqueta--atencao {
+  background: rgba(164, 121, 60, 0.18);
+  color: var(--color-brass);
+}
+
+.etiqueta--receita {
+  background: rgba(63, 107, 63, 0.15);
+  color: #3f6b3f;
+}
+
+.etiqueta--despesa {
+  background: rgba(151, 64, 47, 0.12);
+  color: var(--color-rust);
+}
+
+@media (max-width: 560px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
