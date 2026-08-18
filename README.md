@@ -102,3 +102,6 @@ A aplicação abre em `http://localhost:5173`.
 - Filtros na consulta de totais (por período, por tipo).
 - Autenticação/autorização.
 - Testes automatizados (xUnit no back-end, Vitest no front-end).
+- teste
+  fksaçdfakfç
+  l ,m , , , , ,
